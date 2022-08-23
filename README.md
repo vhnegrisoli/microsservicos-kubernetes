@@ -1,6 +1,16 @@
 # Deploy de Microsserviços com Kubernetes
 
-Projeto desenvolvido em meu canal do YouTube (Comics &amp; Code) sobre deploy de microsserviços utilizando Docker e Kubernetes
+Projeto desenvolvido em meu canal no YouTube chamado [Comics & Code](https://www.youtube.com/channel/UCtDl5evCzPavgyFz7EQ80Gg) sobre deploy de microsserviços utilizando Docker e Kubernetes.
+
+O Comics & Code que trata sobre:
+
+* Quadrinhos/HQs
+* Filmes e super-heróis
+* Análises, críticas, guias, dicas e recomendações de leituras e materiais
+* Programação (Java, Javascript, Python, Node, etc)
+* Desenvolvimento de projetos e tutoriais
+
+![Logo Canal](https://github.com/vhnegrisoli/microsservicos-kubernetes/blob/master/Comics%20%26%20Code.png)
 
 ## Tecnologias
 
