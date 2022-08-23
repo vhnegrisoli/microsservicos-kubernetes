@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: gateway-api-cm
+  namespace: storage-ns
+data:
+  storageApiUrl: "http://storage-api-svc.storage-ns.svc.cluster.local:8081/api/storage"

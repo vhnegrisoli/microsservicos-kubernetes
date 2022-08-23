@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: storage-api-dp
+  namespace: storage-ns
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: storage-api
+  template:
+    metadata:
+      name: storage-api-pod
+      labels:
+        app: storage-api
+    spec:
+      containers:
+        - name: storage-api
+          image: vhnegrisoli/storage-api:latest
+          env:
+            - name: MONGO_DB_URL
+              valueFrom:
+                configMapKeyRef:
+                  name: storage-api-cm
+                  key: mongodbUrl
+          resources:
+            limits:
+              memory: "128Mi"
+              cpu: "500m"
+          ports:
+            - containerPort: 8081
