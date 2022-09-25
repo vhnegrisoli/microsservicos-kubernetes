@@ -68,6 +68,48 @@ kubectl .\kubernetes\services\
 
 `kubectl port-forward svc/gateway-api-svc 30080:8080`
 
+### Endpoint para teste
+
+O endpoint para teste será no projeto `gateway-api`, na seguinte configuração:
+
+**POST -> http://localhost:8080/api/data**
+
+Body:
+
+```json
+{
+    "status": 200,
+    "data": "Comics!",
+    "originService": "gateway-api"
+}
+```
+
+Headers:
+
+```
+tracing: QUALQUER_INFORMACAO
+```
+
+Exemplo de resposta:
+
+```json
+{
+    "status": 200,
+    "data": {
+        "status": 200,
+        "response": {
+            "data": "Comics!",
+            "status": 200,
+            "originService": "gateway-api",
+            "currentService": "storage-api",
+            "createdAt": "2022-09-25T22:04:11.923Z",
+            "_id": "6330d05b3377d74a32cd75d5",
+            "__v": 0
+        }
+    }
+}
+```
+
 ### Autor
 
 * Victor Hugo Negrisoli
