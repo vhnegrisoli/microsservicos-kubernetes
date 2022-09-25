@@ -18,7 +18,7 @@ app.post('/api/data', async (req, res) => {
         let body = req.body;
         log(req, null, null, 'REQUEST');
         await axios
-            .post(STORAGE_URL, body)
+            .post(STORAGE_URL, body, { headers: { tracing: req.headers.tracing } })
             .then(res => {
                 data.status = res.status;
                 data.data = res.data;
